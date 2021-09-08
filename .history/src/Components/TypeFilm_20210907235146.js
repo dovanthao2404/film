@@ -21,6 +21,7 @@ class TypeFilm extends Component {
     return type;
   }
 
+
   render() {
     const url = document.URL;
     return (

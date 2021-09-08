@@ -21,6 +21,13 @@ class TypeFilm extends Component {
     return type;
   }
 
+  handleRenderFilter = () => {
+    if (this.props.filter) {
+      return <RenderFilter></RenderFilter>
+    }
+  }
+
+
   render() {
     const url = document.URL;
     return (
@@ -28,7 +35,7 @@ class TypeFilm extends Component {
         <section className="name-type">
           <h2>{this.renderFilmType()}</h2>
         </section>
-        <RenderFilter></RenderFilter>
+        {this.handleRenderFilter()}
         <div className="list-filmType mt-3">
           <div className="row">
             <RenderListFilm url={url} />
@@ -49,6 +56,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     pwdPagination: state.pwdPagination,
     database: state.database,
+    filter: state.filter
   }
 }
 export default connect(mapStateToProps)(TypeFilm)

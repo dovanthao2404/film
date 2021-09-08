@@ -175,6 +175,7 @@ class Pagination extends Component {
           }
         }
       }
+      console.log(listTypeFilmFilter.length)
     }
     return (
       <>

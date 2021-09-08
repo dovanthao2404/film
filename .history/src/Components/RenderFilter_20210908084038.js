@@ -48,6 +48,7 @@ class RenderFilter extends Component {
                 <option value="Hài Hước">Hài Hước</option>
                 <option value="Phim phiêu lưu">Phim phiêu lưu</option>
                 <option value="Phim kinh dị">Phim kinh dị</option>
+
               </select>
             </div>
           </div>

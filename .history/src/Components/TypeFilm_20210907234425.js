@@ -21,6 +21,7 @@ class TypeFilm extends Component {
     return type;
   }
 
+
   render() {
     const url = document.URL;
     return (
@@ -49,6 +50,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     pwdPagination: state.pwdPagination,
     database: state.database,
+    filter: state.filter
   }
 }
 export default connect(mapStateToProps)(TypeFilm)

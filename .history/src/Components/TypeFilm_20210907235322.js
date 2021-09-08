@@ -21,6 +21,10 @@ class TypeFilm extends Component {
     return type;
   }
 
+  componentDidUpdate = (prevProps) => {
+
+  }
+
   render() {
     const url = document.URL;
     return (

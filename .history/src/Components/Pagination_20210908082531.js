@@ -154,19 +154,17 @@ class Pagination extends Component {
 
 
   render() {
-    const { database, filter } = this.props;
-    if (!filter && database) {
+    if (!this.props.filter) {
 
       return (
         <>
           {this.handleRenderPwd()}
         </>
       )
-    }
+    } else {
+      const { database, filter } = this.props;
+      const listTypeFilmFilter = []
 
-
-    const listTypeFilmFilter = []
-    if (filter && database) {
       for (let type in database.phim) {
         for (let i = 0; i < database.phim[type].length; i++) {
           const film = database.phim[type][i];
@@ -175,12 +173,13 @@ class Pagination extends Component {
           }
         }
       }
+
+      return (
+        <>
+          {this.handleRenderPwd(listTypeFilmFilter.length)}
+        </>
+      )
     }
-    return (
-      <>
-        {this.handleRenderPwd(listTypeFilmFilter.length)}
-      </>
-    )
   }
 
 }

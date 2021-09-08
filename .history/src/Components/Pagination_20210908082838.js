@@ -155,6 +155,7 @@ class Pagination extends Component {
 
   render() {
     const { database, filter } = this.props;
+    const listTypeFilmFilter = []
     if (!filter && database) {
 
       return (
@@ -163,9 +164,6 @@ class Pagination extends Component {
         </>
       )
     }
-
-
-    const listTypeFilmFilter = []
     if (filter && database) {
       for (let type in database.phim) {
         for (let i = 0; i < database.phim[type].length; i++) {
@@ -175,12 +173,13 @@ class Pagination extends Component {
           }
         }
       }
+
+      return (
+        <>
+          {this.handleRenderPwd(listTypeFilmFilter.length)}
+        </>
+      )
     }
-    return (
-      <>
-        {this.handleRenderPwd(listTypeFilmFilter.length)}
-      </>
-    )
   }
 
 }

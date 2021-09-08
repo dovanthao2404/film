@@ -22,7 +22,7 @@ class RenderListFilm extends Component {
     var startPage = (pwdPagination - 1) * row * 4;
     var endPage = startPage + 12;
 
-    if (filter && database) {
+    if (filter) {
       const listTypeFilmFilter = []
 
       for (let type in database.phim) {

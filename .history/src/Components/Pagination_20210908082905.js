@@ -175,12 +175,13 @@ class Pagination extends Component {
           }
         }
       }
+      console.log(listTypeFilmFilter.length)
+      return (
+        <>
+          {this.handleRenderPwd(listTypeFilmFilter.length)}
+        </>
+      )
     }
-    return (
-      <>
-        {this.handleRenderPwd(listTypeFilmFilter.length)}
-      </>
-    )
   }
 
 }

@@ -7,6 +7,7 @@ import {
 class Nav extends Component {
   resetValue = async () => {
     this.props.resetPWD()
+    // await this.props.resetFilter(Math.random())
     await this.props.resetFilter("")
   }
   render() {

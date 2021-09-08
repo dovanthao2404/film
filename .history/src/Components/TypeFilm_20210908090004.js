@@ -28,7 +28,7 @@ class TypeFilm extends Component {
         <section className="name-type">
           <h2>{this.renderFilmType()}</h2>
         </section>
-        <RenderFilter />
+        <RenderFilter filter={this.props.filter}></RenderFilter>
         <div className="list-filmType mt-3">
           <div className="row">
             <RenderListFilm url={url} />

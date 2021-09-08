@@ -25,11 +25,11 @@ class TypeFilm extends Component {
     const url = document.URL;
     return (
       <div className="container">
-        <section className="name-type">
+        {/* <section className="name-type">
           <h2>{this.renderFilmType()}</h2>
-        </section>
+        </section> */}
         <RenderFilter />
-        <div className="list-filmType mt-3">
+        {/* <div className="list-filmType mt-3">
           <div className="row">
             <RenderListFilm url={url} />
           </div>
@@ -38,7 +38,7 @@ class TypeFilm extends Component {
           <ul className="pagination justify-content-center align-items-end">
             <Pagination></Pagination>
           </ul>
-        </nav>
+        </nav> */}
       </div>
 
     )

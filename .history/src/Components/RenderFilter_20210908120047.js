@@ -45,6 +45,7 @@ class RenderFilter extends Component {
   }
 
   render() {
+    console.log(this.props.filter)
     return (
       <>
         <section className="filter-film rounded">

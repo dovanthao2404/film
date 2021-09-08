@@ -8,7 +8,7 @@ class RenderFilter extends Component {
   }
 
 
-  handleRenderOption = (filter) => {
+  handleRenderOption = () => {
     // const { database } = this.props
     // let listType = []
     // if (database) {
@@ -29,7 +29,7 @@ class RenderFilter extends Component {
     // })
     // return listCategoryRender;
     return (
-      <select defaultValue={filter} className="custom-select" name="type" id="type-film" onChange={this.handleGetValue}
+      <select defaultValue={this.props.filter} className="custom-select" name="type" id="type-film" onChange={this.handleGetValue}
       >
         <option value="">- Tất cả -</option>
         <option value="Phim tình cảm">Phim tình cảm</option>
@@ -45,15 +45,19 @@ class RenderFilter extends Component {
   }
 
   render() {
+    console.log(this.props.filter)
     return (
       <>
         <section className="filter-film rounded">
           <div className="row">
             <div className="form-group">
               <label htmlFor="type-film">Thể loại</label>
+              {/*
+              */}
+
 
               {this.handleRenderOption(this.props.filter)}
-
+              {/* <p>{this.props.filter}</p> */}
             </div>
           </div>
         </section>

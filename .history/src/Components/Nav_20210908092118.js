@@ -5,9 +5,10 @@ import {
 } from "react-router-dom";
 
 class Nav extends Component {
-  resetValue = async () => {
+  resetValue = () => {
     this.props.resetPWD()
-    await this.props.resetFilter("")
+    this.props.resetFilter("test")
+    this.props.resetFilter("")
   }
   render() {
     return (

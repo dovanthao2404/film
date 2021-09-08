@@ -24,24 +24,24 @@ class TypeFilm extends Component {
   render() {
     const url = document.URL;
     return (
-      <div className="container">
-        <section className="name-type">
-          <h2>{this.renderFilmType()}</h2>
-        </section>
-        <RenderFilter />
-        <div className="list-filmType mt-3">
-          <div className="row">
-            <RenderListFilm url={url} />
-          </div>
-        </div>
-        <nav aria-label="Page navigation example">
-          <ul className="pagination justify-content-center align-items-end">
-            <Pagination></Pagination>
-          </ul>
-        </nav>
-      </div>
+      <RenderFilter />
 
     )
+    // <div className="container">
+    //     {/* <section className="name-type">
+    //       <h2>{this.renderFilmType()}</h2>
+    //     </section> */}
+    //     {/* <div className="list-filmType mt-3">
+    //       <div className="row">
+    //         <RenderListFilm url={url} />
+    //       </div>
+    //     </div>
+    //     <nav aria-label="Page navigation example">
+    //       <ul className="pagination justify-content-center align-items-end">
+    //         <Pagination></Pagination>
+    //       </ul>
+    //     </nav> */}
+    //   </div>
   }
 }
 

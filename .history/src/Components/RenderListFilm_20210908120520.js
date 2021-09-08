@@ -14,7 +14,7 @@ class RenderListFilm extends Component {
 
   }
 
-  renderFilm = () => {
+  renderFilm = async () => {
     const { pwdPagination, database, filter } = this.props;
     const urls = this.props.url?.split("/")
     const filmType = urls[3];
@@ -22,7 +22,7 @@ class RenderListFilm extends Component {
     var startPage = (pwdPagination - 1) * row * 4;
     var endPage = startPage + 12;
 
-    if (filter && database) {
+    await if (filter && database) {
       const listTypeFilmFilter = []
 
       for (let type in database.phim) {

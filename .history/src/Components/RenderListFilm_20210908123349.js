@@ -22,30 +22,31 @@ class RenderListFilm extends Component {
     var startPage = (pwdPagination - 1) * row * 4;
     var endPage = startPage + 12;
 
-    if (filter && database) {
-      const listTypeFilmFilter = []
+    // if (filter && database) {
+    //   const listTypeFilmFilter = []
 
-      for (let type in database.phim) {
-        for (let i = 0; i < database.phim[type].length; i++) {
-          const film = { ...database.phim[type][i] };
-          if (film.category === filter) {
-            film.type = type;
-            listTypeFilmFilter.push(film)
-          }
-        }
-      }
+    //   for (let type in database.phim) {
+    //     for (let i = 0; i < database.phim[type].length; i++) {
+    //       const film = { ...database.phim[type][i] };
+    //       if (film.category === filter) {
+    //         film.type = type;
+    //         listTypeFilmFilter.push(film)
+    //       }
+    //     }
+    //   }
 
-      const totalFilm = listTypeFilmFilter.length;
-      endPage = endPage > totalFilm ? totalFilm : endPage;
-      const listFilm = []
-      for (let i = startPage; i < endPage; i++) {
+    //   const totalFilm = listTypeFilmFilter.length;
+    //   endPage = endPage > totalFilm ? totalFilm : endPage;
+    //   const listFilm = []
+    //   for (let i = startPage; i < endPage; i++) {
 
-        const film = listTypeFilmFilter[i];
-        listFilm.push(<FilmItem key={i} imageUrl={film.imageUrl} title={film.title} type={film.type} />);
-      }
-      return listFilm;
+    //     const film = listTypeFilmFilter[i];
+    //     listFilm.push(<FilmItem key={i} imageUrl={film.imageUrl} title={film.title} type={film.type} />);
+    //   }
+    //   return listFilm;
 
-    } else if (database) {
+    // } else
+    if (database) {
 
       const totalFilm = database.phim[filmType]?.length || this.totalFilm();
       endPage = endPage > totalFilm ? totalFilm : endPage;

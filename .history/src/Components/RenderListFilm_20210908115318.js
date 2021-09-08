@@ -45,7 +45,7 @@ class RenderListFilm extends Component {
       }
       return listFilm;
 
-    } else if (database) {
+    } else if (!filter && database) {
 
       const totalFilm = database.phim[filmType]?.length || this.totalFilm();
       endPage = endPage > totalFilm ? totalFilm : endPage;

@@ -6,12 +6,12 @@ class RenderListFilm extends Component {
 
 
   totalFilm = () => {
+
     let total = 0;
     for (let type in this.props.database.phim) {
       total += this.props.database.phim[type].length;
     }
     return total;
-
   }
 
   renderFilm = () => {
@@ -22,7 +22,7 @@ class RenderListFilm extends Component {
     var startPage = (pwdPagination - 1) * row * 4;
     var endPage = startPage + 12;
 
-    if (filter && database) {
+    if (filter === "all" && database) {
       const listTypeFilmFilter = []
 
       for (let type in database.phim) {

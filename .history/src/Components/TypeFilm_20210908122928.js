@@ -25,9 +25,9 @@ class TypeFilm extends Component {
     const url = document.URL;
     return (
       <div className="container">
-        <section className="name-type">
+        {/* <section className="name-type">
           <h2>{this.renderFilmType()}</h2>
-        </section>
+        </section> */}
         <RenderFilter />
         <div className="list-filmType mt-3">
           <div className="row">

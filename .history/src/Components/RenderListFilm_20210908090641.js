@@ -6,12 +6,12 @@ class RenderListFilm extends Component {
 
 
   totalFilm = () => {
+
     let total = 0;
     for (let type in this.props.database.phim) {
       total += this.props.database.phim[type].length;
     }
     return total;
-
   }
 
   renderFilm = () => {

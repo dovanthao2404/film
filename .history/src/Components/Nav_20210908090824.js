@@ -5,15 +5,15 @@ import {
 } from "react-router-dom";
 
 class Nav extends Component {
-  resetValue = async () => {
+  resetValue = () => {
     this.props.resetPWD()
-    await this.props.resetFilter("")
+    this.props.resetFilter()
   }
   render() {
     return (
       <div className="header fixed-top">
         <nav className="navbar navbar-expand-lg">
-          <Link className="navbar-brand" to="/home" onClick={() => this.props.resetFilter("")}>XemPhim</Link>
+          <Link className="navbar-brand" to="/home" onClick={this.props.resetFilter}>XemPhim</Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#film-navbar" aria-controls="film-navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
@@ -62,8 +62,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     updatePWD: (newPwd) => {
       dispatch({ type: "UPDATE_PWD", newPwd })
     },
-    resetFilter: (valueFilter) => {
-      dispatch({ type: "FILTER", valueFilter })
+    resetFilter: () => {
+      dispatch({ type: "FILTER", valueFilter: "" })
     }
   }
 }

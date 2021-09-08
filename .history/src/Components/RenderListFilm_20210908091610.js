@@ -6,18 +6,19 @@ class RenderListFilm extends Component {
 
 
   totalFilm = () => {
+
     let total = 0;
     for (let type in this.props.database.phim) {
       total += this.props.database.phim[type].length;
     }
     return total;
-
   }
 
   renderFilm = () => {
     const { pwdPagination, database, filter } = this.props;
     const urls = this.props.url?.split("/")
     const filmType = urls[3];
+    console.log(filmType)
     const row = 3;
     var startPage = (pwdPagination - 1) * row * 4;
     var endPage = startPage + 12;

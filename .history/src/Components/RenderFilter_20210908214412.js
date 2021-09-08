@@ -45,6 +45,7 @@ class RenderFilter extends Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <>
         <section className="filter-film rounded">
@@ -52,7 +53,8 @@ class RenderFilter extends Component {
             <div className="form-group">
               <label htmlFor="type-film">Thể loại</label>
 
-              {this.handleRenderOption(this.props.filter)}
+              {this.handleRenderOption(this.props.filter.Filter)}
+              <p>{this.props.filter.Filter}</p>
             </div>
           </div>
         </section>

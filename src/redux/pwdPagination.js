@@ -10,4 +10,4 @@ export const pwdPaginationReducer = (state = pwdPagination, action) => {
     default:
       return state;
   }
-}
+};

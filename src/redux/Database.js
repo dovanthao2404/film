@@ -7,4 +7,4 @@ export const databaseReducer = (state = database, action) => {
     default:
       return state;
   }
-}
+};

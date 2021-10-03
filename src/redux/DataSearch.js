@@ -7,5 +7,4 @@ export const dataSearchReducer = (state = dataSearch, action) => {
     default:
       return state;
   }
-}
-
+};

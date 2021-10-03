@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
-import RenderFilter from './RenderFilter';
-import ListType from './ListType';
-import { connect } from 'react-redux';
-import RenderListFilm from "./RenderListFilm"
-import Pagination from "./Pagination"
+import React, { Component } from "react";
+import RenderFilter from "./RenderFilter";
+import ListType from "./ListType";
+import { connect } from "react-redux";
+import RenderListFilm from "./RenderListFilm";
+import Pagination from "./Pagination";
 class Home extends Component {
-
   handleRenderHome = () => {
-    return this.props.filter ?
+    return this.props.filter ? (
       <div className="container">
         <div className="list-filmType mt-3">
           <div className="row">
@@ -19,9 +18,11 @@ class Home extends Component {
             </ul>
           </nav>
         </div>
-      </div> :
-      <ListType />;
-  }
+      </div>
+    ) : (
+      <ListType />
+    );
+  };
   render() {
     return (
       <>
@@ -30,13 +31,13 @@ class Home extends Component {
         </div>
         {this.handleRenderHome()}
       </>
-    )
+    );
   }
 }
 
-const mapStateToProps = (state,) => {
+const mapStateToProps = (state) => {
   return {
-    filter: state.filter
-  }
-}
-export default connect(mapStateToProps, null)(Home)
+    filter: state.filter,
+  };
+};
+export default connect(mapStateToProps, null)(Home);

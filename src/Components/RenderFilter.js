@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class RenderFilter extends Component {
   handleGetValue = (e) => {
-    const value = e.target.value
+    const value = e.target.value;
     this.props.getValueFilter(value);
-  }
-
+  };
 
   handleRenderOption = (filter) => {
     // const { database } = this.props
@@ -21,7 +20,6 @@ class RenderFilter extends Component {
     // const removeDuplicates = (listType) => [...new Set(listType)]
     // const listCategory = removeDuplicates(listType)
 
-
     // const listCategory = ['Phim tình cảm', 'Phim hành động', 'Phim hoạt hình', 'Phim cổ trang', 'TV SHOW', 'Hài Hước', 'Phim phiêu lưu', 'Phim kinh dị']
     // let listCategoryRender = [<option key={-1} value="">- Tất cả -</option>]
     // listCategory.forEach((value, key) => {
@@ -29,7 +27,12 @@ class RenderFilter extends Component {
     // })
     // return listCategoryRender;
     return (
-      <select value={filter} className="custom-select" name="type" id="type-film" onChange={this.handleGetValue}
+      <select
+        value={filter}
+        className="custom-select"
+        name="type"
+        id="type-film"
+        onChange={this.handleGetValue}
       >
         <option value="">- Tất cả -</option>
         <option value="Phim tình cảm">Phim tình cảm</option>
@@ -41,8 +44,8 @@ class RenderFilter extends Component {
         <option value="Phim phiêu lưu">Phim phiêu lưu</option>
         <option value="Phim kinh dị">Phim kinh dị</option>
       </select>
-    )
-  }
+    );
+  };
 
   render() {
     return (
@@ -57,21 +60,20 @@ class RenderFilter extends Component {
           </div>
         </section>
       </>
-
-    )
+    );
   }
 }
 const mapStateToProps = (state, ownProps) => {
   return {
     filter: state.filter,
-  }
-}
+  };
+};
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     getValueFilter: (valueFilter) => {
-      dispatch({ type: "FILTER", valueFilter })
-    }
-  }
-}
+      dispatch({ type: "FILTER", valueFilter });
+    },
+  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(RenderFilter)
+export default connect(mapStateToProps, mapDispatchToProps)(RenderFilter);

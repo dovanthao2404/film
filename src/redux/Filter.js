@@ -1,4 +1,4 @@
-const filter = '';
+const filter = "";
 export const filterReducer = (state = filter, action) => {
   switch (action.type) {
     case "FILTER":
@@ -7,4 +7,4 @@ export const filterReducer = (state = filter, action) => {
     default:
       return state;
   }
-}
+};

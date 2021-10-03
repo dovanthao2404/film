@@ -1,4 +1,3 @@
-
 let filmDetailCurrent = {};
 export let reducerFilmDetailCurrent = (state = filmDetailCurrent, action) => {
   switch (action.type) {
@@ -18,9 +17,9 @@ export let reducerFilmDetailCurrent = (state = filmDetailCurrent, action) => {
       state = { ...state, index: action.index };
       return state;
     case "CHANGE_EPISODE":
-      state = { ...state, episode: action.episode }
+      state = { ...state, episode: action.episode };
       return state;
     default:
       return state;
   }
-}
+};
